@@ -436,6 +436,7 @@ textarea {
 .update-card p {
   margin: 10px 0 0;
   color: var(--muted);
+  white-space: pre-line;
 }
 
 .site-footer {

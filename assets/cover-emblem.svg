@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" role="img" aria-label="Emblema Los Santos Police Department">
+  <defs>
+    <linearGradient id="banner" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#123f86"/>
+      <stop offset="1" stop-color="#061833"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="14" flood-color="#08204a" flood-opacity="0.24"/>
+    </filter>
+  </defs>
+  <path d="M82 304c16-132 116-232 298-232s282 100 298 232z" fill="url(#banner)" filter="url(#softShadow)"/>
+  <path d="M116 304c18-106 102-184 264-184s246 78 264 184z" fill="#102a58" opacity=".88"/>
+  <g transform="translate(264 88)">
+    <path d="M116 20c46 28 78 75 84 132 3 32-4 65-20 93l-64-37-64 37c-16-28-23-61-20-93 6-57 38-104 84-132z" fill="#f7f9fc" stroke="#c6932d" stroke-width="5"/>
+    <path d="M116 63l16 40 43 4-32 27 10 42-37-23-37 23 10-42-32-27 43-4z" fill="#08204a"/>
+    <path d="M92 128h48m-24-32v70" stroke="#c6932d" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <g fill="none" stroke-linecap="round" stroke-width="18">
+    <path d="M130 166c48-42 106-58 174-48" stroke="#bf2f3d"/>
+    <path d="M132 206c48-30 101-42 158-32" stroke="#f7f9fc"/>
+    <path d="M630 166c-48-42-106-58-174-48" stroke="#bf2f3d"/>
+    <path d="M628 206c-48-30-101-42-158-32" stroke="#f7f9fc"/>
+  </g>
+  <path d="M234 246c44-28 78-68 102-120M526 246c-44-28-78-68-102-120" fill="none" stroke="#5f7f4c" stroke-width="14" stroke-linecap="round"/>
+  <path d="M82 304h596" stroke="#c6932d" stroke-width="8" stroke-linecap="round"/>
+</svg>

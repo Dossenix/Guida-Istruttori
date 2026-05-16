@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#08204a">
+    <title>Pubblica aggiornamento | Guida Istruttori LSPD</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html#inizio" aria-label="Guida Istruttori LSPD">
+        <img src="assets/lspd-seal.svg" alt="" width="52" height="52">
+        <span>
+          <strong>Los Santos Police Department</strong>
+          <small>Handbook | Reparto Istruttori</small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Navigazione principale">
+        <a href="index.html#guida">Guida</a>
+        <a href="index.html#aggiornamenti">Aggiornamenti</a>
+        <a href="admin.html" aria-current="page">Pubblica</a>
+      </nav>
+    </header>
+
+    <main class="admin-shell">
+      <section class="admin-hero">
+        <p class="eyebrow">Solo GitHub</p>
+        <h1>Pubblica un aggiornamento</h1>
+        <p>
+          La pubblicazione resta protetta dai permessi del repository: chi non può scrivere
+          su GitHub può preparare un testo, ma non può sincronizzarlo sul sito.
+        </p>
+      </section>
+
+      <section class="admin-grid" aria-label="Editor aggiornamento">
+        <form class="editor-panel" id="update-form">
+          <label>
+            Titolo
+            <input name="title" required placeholder="Es. Aggiornate le firme ufficiali">
+          </label>
+          <label>
+            Data
+            <input name="date" type="date" required>
+          </label>
+          <label>
+            Autore
+            <input name="author" required value="White">
+          </label>
+          <label>
+            Contenuto
+            <textarea name="body" rows="8" required placeholder="Scrivi qui cosa è cambiato nella guida."></textarea>
+          </label>
+          <div class="form-actions">
+            <button class="button button--primary" type="submit">Genera blocco</button>
+            <button class="button" type="button" id="copy-json">Copia</button>
+            <a class="button" id="github-edit-link" href="data/updates.json">Apri GitHub</a>
+          </div>
+        </form>
+
+        <aside class="preview-panel">
+          <h2>Blocco da inserire in <code>data/updates.json</code></h2>
+          <pre id="json-preview">Compila il modulo per generare un aggiornamento.</pre>
+          <p class="admin-note">
+            Incolla il blocco in cima alla lista `updates`, salva il file e pubblica il commit.
+            GitHub Pages aggiornerà il sito per tutti.
+          </p>
+        </aside>
+      </section>
+    </main>
+
+    <script src="admin.js"></script>
+  </body>
+</html>

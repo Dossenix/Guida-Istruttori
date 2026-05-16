@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#08204a">
+    <title>Guida Istruttori LSPD</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#inizio" aria-label="Guida Istruttori LSPD">
+        <img src="assets/lspd-seal.svg" alt="" width="52" height="52">
+        <span>
+          <strong>Los Santos Police Department</strong>
+          <small>Handbook | Reparto Istruttori</small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Navigazione principale">
+        <a href="#guida">Guida</a>
+        <a href="#aggiornamenti">Aggiornamenti</a>
+        <a href="admin.html">Pubblica</a>
+      </nav>
+    </header>
+
+    <main id="inizio">
+      <section class="cover" aria-labelledby="titolo-guida">
+        <div class="cover__media">
+          <img src="assets/cover-emblem.svg" alt="">
+        </div>
+        <div class="cover__content">
+          <p class="eyebrow">LSPD | Reparto Istruttori</p>
+          <h1 id="titolo-guida">Guida per gli istruttori</h1>
+          <p>
+            Procedure operative, requisiti, prove di addestramento e firme ufficiali
+            della Direzione del reparto.
+          </p>
+          <div class="cover__actions">
+            <a class="button button--primary" href="#guida">Apri guida</a>
+            <a class="button" href="#aggiornamenti">Ultimi aggiornamenti</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="status-strip" aria-label="Stato documento">
+        <div>
+          <span>Ultimo aggiornamento</span>
+          <strong id="last-updated">16/05/2026</strong>
+        </div>
+        <div>
+          <span>Capo della Polizia</span>
+          <strong>White</strong>
+        </div>
+        <div>
+          <span>Direzione Istruttori</span>
+          <strong>Detroit</strong>
+        </div>
+      </section>
+
+      <section class="workspace" id="guida" aria-label="Guida">
+        <aside class="toc" aria-label="Indice guida">
+          <div class="toc__tools">
+            <label for="search">Cerca nella guida</label>
+            <input id="search" type="search" placeholder="Es. inseguimento, recluta, risultati">
+          </div>
+          <nav>
+            <a href="#introduzione">Introduzione</a>
+            <a href="#prenotazione">Prenotazione addestramenti</a>
+            <a href="#recluta-agente">Recluta -> Agente</a>
+            <a href="#agente-agente-ii">Agente -> Agente II</a>
+            <a href="#risultati">Risultati addestramenti</a>
+            <a href="#firme">Firme</a>
+          </nav>
+          <button class="icon-button" type="button" id="print-guide" aria-label="Stampa o salva PDF" title="Stampa o salva PDF">
+            <span aria-hidden="true">PDF</span>
+          </button>
+        </aside>
+
+        <article class="guide-document" id="guide-document">
+          <header class="document-header">
+            <img src="assets/lspd-seal.svg" alt="" width="58" height="58">
+            <div>
+              <p>Los Santos Police Department || LSPD</p>
+              <span>Handbook | Reparto Istruttori</span>
+            </div>
+          </header>
+
+          <section class="guide-section" id="introduzione" data-search-text="introduzione linea guida mansioni istruttore lspd dipartimento direzione aggiornamento">
+            <h2>Introduzione</h2>
+            <p>
+              Questo documento funge da linea guida generale dello svolgimento delle
+              mansioni da Istruttore del LSPD. Saranno di seguito esplicitate le varie
+              mansioni e le procedure da eseguire, è richiesto che si ponga estrema
+              attenzione in quanto state rappresentando il Dipartimento per i nuovi arrivati.
+            </p>
+            <p>
+              Per qualsiasi dubbio siete pregati di contattare un membro della Direzione
+              del reparto che saprà rispondervi, domandate sempre se non siete sicuri.
+            </p>
+            <p>
+              La Direzione del reparto si riserva il diritto di modificare questo documento
+              in qualsiasi momento, il reparto verrà avvertito ma sarà compito dei membri
+              prendere visione dell'aggiornamento.
+            </p>
+          </section>
+
+          <section class="guide-section" id="prenotazione" data-search-text="prenotazione addestramenti direzione coordinatori istruttori recluta agente giorni servizio">
+            <h2>Prenotazione addestramenti</h2>
+            <p>
+              Le prenotazioni degli addestramenti saranno gestite nella loro totalità dai
+              membri della Direzione del Reparto e dai Coordinatori Istruttori.
+            </p>
+            <p>
+              Se una prenotazione verrà valutata idonea allora verrà data la possibilità a
+              voi Istruttori di concordare con l'esaminato un giorno e un orario per
+              eseguire l'addestramento.
+            </p>
+            <p>
+              Per gli addestramenti da Recluta per diventare Agente sarà necessario che il
+              candidato abbia svolto almeno tre giorni di servizio portando attività.
+            </p>
+            <p>
+              Per gli addestramenti da Agente per diventare Agente II sarà necessario che il
+              candidato abbia svolto almeno 7 giorni di servizio portando attività.
+            </p>
+          </section>
+
+          <section class="guide-section" id="recluta-agente" data-search-text="addestramento recluta agente prova teorica regolamento generale dipartimento domande colloquio">
+            <h2>Addestramento Recluta -> Agente</h2>
+            <p>L'addestramento consiste in una prova teorica.</p>
+            <p>
+              Durante tale prova il candidato dovrà dimostrare di aver compreso a fondo il
+              Regolamento Generale del Dipartimento rispondendo ad una serie di domande
+              inerenti ad esso.
+            </p>
+            <p>
+              Le domande da fare sono a discrezione del singolo Istruttore, ovviamente va
+              richiesto di essere più severi rispetto al colloquio.
+            </p>
+          </section>
+
+          <section class="guide-section" id="agente-agente-ii" data-search-text="addestramento agente agente ii prova teorica pratica inseguimento aeroporto adam raptor radio hangar 10-55 fermo stradale">
+            <h2>Addestramento Agente -> Agente II</h2>
+            <p>L'addestramento consiste in una prova teorica e una pratica.</p>
+            <p>
+              Durante la prova teorica il candidato dovrà dimostrare di aver compreso a
+              fondo il Regolamento Generale del Dipartimento rispondendo ad una serie di
+              domande inerenti ad esso.
+            </p>
+            <p>
+              Le domande da fare sono a discrezione del singolo Istruttore, ovviamente va
+              richiesto di essere più severi rispetto al colloquio e all'addestramento
+              precedente.
+            </p>
+            <p>La prova pratica consisterà nella simulazione di un inseguimento.</p>
+            <p>La prova sarà così articolata:</p>
+            <ol>
+              <li>
+                L'istruttore insieme all'esaminato si dirigerà verso l'aeroporto portando
+                un'adam e un Raptor, guidate rispettivamente dall'esaminato e
+                dall'istruttore.
+              </li>
+              <li>
+                Arrivati all'aeroporto verrà concordata una radio<sup>1</sup> che sarà
+                usata durante l'addestramento.
+              </li>
+              <li>
+                L'esaminato si posizionerà con l'adam all'interno dell'hangar e
+                l'istruttore con il raptor guiderà all'interno dell'aeroporto.
+              </li>
+              <li>
+                L'esaminato dovrà svolgere tutte le procedure del normale servizio,
+                simulando un fermo e l'inseguimento del Raptor, questo include:
+                <ol type="a">
+                  <li>Comunicazione del 10-55 all'uscita dell'hangar</li>
+                  <li>Procedura del fermo stradale completa</li>
+                  <li>Procedura dell'inseguimento completa</li>
+                </ol>
+              </li>
+            </ol>
+            <p class="note"><sup>1</sup> Va scelta una frequenza del LSPD, una qualsiasi sottoradio della 5.</p>
+          </section>
+
+          <section class="guide-section" id="risultati" data-search-text="risultati addestramenti canale rapporto esito coordinatore istruttore capo conferma ufficializza">
+            <h2>Risultati addestramenti</h2>
+            <p>
+              Alla fine di ogni addestramento l'istruttore dovrà comunicare nel canale
+              "RISULTATI - ADDESTRAMENTI" il risultato di tale addestramento con l'esito
+              relativo, un Coordinatore Istruttori/Istruttore Capo poi confermerà e
+              ufficializzerà l'addestramento nel canale "RAPPORTO - ADDESTRAMENTI".
+            </p>
+          </section>
+
+          <section class="guide-section signatures" id="firme" data-search-text="firme capo polizia white direzione reparto istruttori detroit">
+            <h2>Firme</h2>
+            <div class="signature-grid">
+              <div>
+                <span>Per il Capo della Polizia</span>
+                <strong>White</strong>
+              </div>
+              <div>
+                <span>Per la Direzione reparto Istruttori</span>
+                <strong>Detroit</strong>
+              </div>
+            </div>
+          </section>
+        </article>
+      </section>
+
+      <section class="updates-band" id="aggiornamenti" aria-labelledby="titolo-aggiornamenti">
+        <div class="section-heading">
+          <p class="eyebrow">Registro sincronizzato</p>
+          <h2 id="titolo-aggiornamenti">Aggiornamenti guida</h2>
+        </div>
+        <div class="updates-list" id="updates-list" aria-live="polite">
+          <p>Caricamento aggiornamenti...</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Los Santos Police Department || LSPD</span>
+      <a href="admin.html">Pubblica aggiornamento</a>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

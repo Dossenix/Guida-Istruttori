@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="LSPD">
+  <defs>
+    <linearGradient id="sealBlue" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0c3474"/>
+      <stop offset="1" stop-color="#061833"/>
+    </linearGradient>
+  </defs>
+  <circle cx="60" cy="60" r="57" fill="#f7f9fc" stroke="#08204a" stroke-width="4"/>
+  <circle cx="60" cy="60" r="47" fill="url(#sealBlue)" stroke="#c6932d" stroke-width="3"/>
+  <path d="M60 20l9 22 24 2-18 15 6 24-21-13-21 13 6-24-18-15 24-2z" fill="#f4f7fb" stroke="#c6932d" stroke-width="2"/>
+  <path d="M43 58c8-8 26-8 34 0-4 12-10 20-17 24-7-4-13-12-17-24z" fill="#08204a"/>
+  <path d="M52 58h16m-8-10v22" stroke="#c6932d" stroke-width="3" stroke-linecap="round"/>
+  <path d="M28 42c8-8 17-12 27-13M92 42c-8-8-17-12-27-13" fill="none" stroke="#bf2f3d" stroke-width="5" stroke-linecap="round"/>
+  <text x="60" y="103" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#08204a">LSPD</text>
+</svg>

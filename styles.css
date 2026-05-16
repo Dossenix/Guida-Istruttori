@@ -252,6 +252,7 @@ label {
 }
 
 input,
+select,
 textarea {
   width: 100%;
   padding: 11px 12px;
@@ -357,6 +358,29 @@ textarea {
 
 .guide-section li + li {
   margin-top: 8px;
+}
+
+.guide-addition {
+  max-width: 820px;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.guide-addition h3 {
+  margin: 0 0 6px;
+  color: var(--navy);
+  font-size: 1.05rem;
+}
+
+.guide-addition__meta {
+  color: var(--green);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.guide-addition__body {
+  white-space: pre-line;
 }
 
 .note {

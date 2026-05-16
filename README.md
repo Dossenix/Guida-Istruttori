@@ -1,6 +1,6 @@
 # Guida Istruttori LSPD
 
-Sito statico per GitHub Pages con guida istruttori, registro aggiornamenti e pannello di preparazione aggiornamenti.
+Sito statico per GitHub Pages con guida istruttori, registro aggiornamenti e pannello di pubblicazione tramite GitHub Actions.
 
 Repository: https://github.com/Dossenix/Guida-Istruttori
 
@@ -14,19 +14,21 @@ URL previsto del sito: https://dossenix.github.io/Guida-Istruttori/
 4. Salva e attendi il completamento del deploy.
 5. Apri `https://dossenix.github.io/Guida-Istruttori/`.
 
-## Aggiornamenti
+## Aggiornamenti automatici
 
 Gli aggiornamenti pubblici vengono letti da `data/updates.json`.
+Le integrazioni mostrate dentro la guida standard vengono lette da `data/guide-additions.json`.
 
 Per pubblicare:
 
 1. Apri `https://dossenix.github.io/Guida-Istruttori/admin.html`.
-2. Genera il blocco JSON.
-3. Apri `data/updates.json` su GitHub.
-4. Incolla il blocco in cima alla lista `updates`.
-5. Salva con commit.
+2. Compila titolo, data, autore, sezione del regolamento e contenuto.
+3. Premi `Prepara invio`.
+4. Premi `Apri GitHub`.
+5. Su GitHub controlla il testo e premi `Submit new issue`.
 
-Solo chi ha permesso di scrittura sul repository può sincronizzare un aggiornamento per tutti gli utenti.
+La GitHub Action `Publish guide update` pubblica automaticamente la richiesta sia nel registro aggiornamenti sia nella sezione scelta della guida.
+Solo le richieste create dall'account `Dossenix` vengono applicate.
 
 La pagina `admin.html` non è linkata nella navigazione pubblica: resta accessibile solo digitando direttamente l'indirizzo.
 

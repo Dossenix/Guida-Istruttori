@@ -1,0 +1,75 @@
+name: Publish guide update
+
+on:
+  issues:
+    types:
+      - opened
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  publish:
+    name: Publish request from Dossenix
+    if: github.event.issue.user.login == 'Dossenix' && contains(github.event.issue.body, '<!-- guida-update:v1 -->')
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Apply guide update
+        run: node scripts/publish-issue-update.js
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+
+      - name: Commit and push update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/updates.json data/guide-additions.json
+          git commit -m "Publish guide update from issue #${{ github.event.issue.number }}"
+          git push
+
+      - name: Close request
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue_number = context.issue.number;
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number,
+              body: "Aggiornamento pubblicato nella guida e nel registro aggiornamenti."
+            });
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number,
+              state: "closed"
+            });
+
+  reject:
+    name: Reject unauthorized guide request
+    if: github.event.issue.user.login != 'Dossenix' && contains(github.event.issue.body, '<!-- guida-update:v1 -->')
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Close unauthorized request
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue_number = context.issue.number;
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number,
+              body: "Richiesta non autorizzata: solo l'account Dossenix può pubblicare aggiornamenti della guida."
+            });
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number,
+              state: "closed"
+            });

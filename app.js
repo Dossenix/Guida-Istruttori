@@ -72,6 +72,50 @@ function renderUpdates(items) {
   }
 }
 
+function renderGuideAdditions(items) {
+  if (!Array.isArray(items)) {
+    return;
+  }
+
+  items.forEach((item) => {
+    const section = document.getElementById(item.sectionId);
+    if (!section) {
+      return;
+    }
+
+    const wrapper = document.createElement("div");
+    const title = document.createElement("h3");
+    const meta = document.createElement("p");
+    const body = document.createElement("p");
+
+    wrapper.className = "guide-addition";
+    wrapper.id = item.id;
+    title.textContent = item.title;
+    meta.className = "guide-addition__meta";
+    meta.textContent = `${formatDate(item.date)} | ${item.author}`;
+    body.className = "guide-addition__body";
+    body.textContent = item.body;
+
+    wrapper.append(title, meta, body);
+    section.append(wrapper);
+  });
+}
+
+async function loadGuideAdditions() {
+  try {
+    const response = await fetch("data/guide-additions.json", { cache: "no-store" });
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+    const data = await response.json();
+    renderGuideAdditions(data.additions);
+    filterSections();
+    setActiveLink();
+  } catch (error) {
+    // La guida base resta leggibile anche se le integrazioni non sono disponibili.
+  }
+}
+
 async function loadUpdates() {
   try {
     const response = await fetch("data/updates.json", { cache: "no-store" });
@@ -95,4 +139,5 @@ document.querySelector("#print-guide")?.addEventListener("click", () => window.p
 
 filterSections();
 setActiveLink();
+loadGuideAdditions();
 loadUpdates();

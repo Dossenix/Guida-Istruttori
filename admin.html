@@ -28,8 +28,8 @@
         <p class="eyebrow">Solo GitHub</p>
         <h1>Pubblica un aggiornamento</h1>
         <p>
-          La pubblicazione resta protetta dai permessi del repository: chi non può scrivere
-          su GitHub può preparare un testo, ma non può sincronizzarlo sul sito.
+          Il modulo prepara una richiesta GitHub. Dopo l'invio, una GitHub Action aggiunge
+          il testo sia al registro aggiornamenti sia alla sezione scelta del regolamento.
         </p>
       </section>
 
@@ -37,7 +37,7 @@
         <form class="editor-panel" id="update-form">
           <label>
             Titolo
-            <input name="title" required placeholder="Es. Aggiornate le firme ufficiali">
+            <input name="title" required placeholder="Es. Nuova procedura per Istruttori Capo">
           </label>
           <label>
             Data
@@ -45,25 +45,37 @@
           </label>
           <label>
             Autore
-            <input name="author" required value="White">
+            <input name="author" required value="Detroit">
+          </label>
+          <label>
+            Sezione del regolamento
+            <select name="section" required>
+              <option value="risultati" selected>Risultati addestramenti</option>
+              <option value="prenotazione">Prenotazione addestramenti</option>
+              <option value="recluta-agente">Addestramento Recluta -> Agente</option>
+              <option value="agente-agente-ii">Addestramento Agente -> Agente II</option>
+              <option value="introduzione">Introduzione</option>
+              <option value="firme">Firme</option>
+            </select>
           </label>
           <label>
             Contenuto
-            <textarea name="body" rows="8" required placeholder="Scrivi qui cosa è cambiato nella guida."></textarea>
+            <textarea name="body" rows="8" required placeholder="Scrivi qui cosa cambia nella guida."></textarea>
           </label>
           <div class="form-actions">
-            <button class="button button--primary" type="submit">Genera blocco</button>
-            <button class="button" type="button" id="copy-json">Copia</button>
-            <a class="button" id="github-edit-link" href="data/updates.json">Apri GitHub</a>
+            <button class="button button--primary" type="submit">Prepara invio</button>
+            <button class="button" type="button" id="copy-json">Copia richiesta</button>
+            <a class="button" id="github-edit-link" href="https://github.com/Dossenix/Guida-Istruttori/issues/new">Apri GitHub</a>
           </div>
         </form>
 
         <aside class="preview-panel">
-          <h2>Blocco da inserire in <code>data/updates.json</code></h2>
-          <pre id="json-preview">Compila il modulo per generare un aggiornamento.</pre>
+          <h2>Richiesta che verrà inviata a GitHub</h2>
+          <pre id="json-preview">Compila il modulo per preparare l'invio.</pre>
           <p class="admin-note">
-            Incolla il blocco in cima alla lista `updates`, salva il file e pubblica il commit.
-            GitHub Pages aggiornerà il sito per tutti.
+            Dopo aver aperto GitHub, controlla il testo e premi "Submit new issue".
+            Se il testo non appare già compilato, usa "Copia richiesta" e incollalo nel corpo della issue.
+            Solo le richieste inviate dall'account Dossenix vengono pubblicate.
           </p>
         </aside>
       </section>

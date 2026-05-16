@@ -2,12 +2,17 @@
 
 Sito statico per GitHub Pages con guida istruttori, registro aggiornamenti e pannello di preparazione aggiornamenti.
 
+Repository: https://github.com/Dossenix/Guida-Istruttori
+
+URL previsto del sito: https://dossenix.github.io/Guida-Istruttori/
+
 ## Pubblicazione su GitHub Pages
 
-1. Crea un repository GitHub e carica questi file.
-2. Vai in `Settings -> Pages`.
-3. Seleziona il branch principale e la cartella root.
-4. Apri l'URL generato da GitHub Pages.
+1. Vai in `Settings -> Pages`.
+2. In `Build and deployment`, scegli `Deploy from a branch`.
+3. Seleziona `main` e la cartella `/ (root)`.
+4. Salva e attendi il completamento del deploy.
+5. Apri `https://dossenix.github.io/Guida-Istruttori/`.
 
 ## Aggiornamenti
 

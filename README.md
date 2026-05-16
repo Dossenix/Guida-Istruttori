@@ -20,13 +20,15 @@ Gli aggiornamenti pubblici vengono letti da `data/updates.json`.
 
 Per pubblicare:
 
-1. Apri `admin.html` dal sito.
+1. Apri `https://dossenix.github.io/Guida-Istruttori/admin.html`.
 2. Genera il blocco JSON.
 3. Apri `data/updates.json` su GitHub.
 4. Incolla il blocco in cima alla lista `updates`.
 5. Salva con commit.
 
 Solo chi ha permesso di scrittura sul repository può sincronizzare un aggiornamento per tutti gli utenti.
+
+La pagina `admin.html` non è linkata nella navigazione pubblica: resta accessibile solo digitando direttamente l'indirizzo.
 
 ## Firme attuali
 
